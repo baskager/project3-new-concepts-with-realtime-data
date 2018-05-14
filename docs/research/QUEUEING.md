@@ -11,13 +11,6 @@ In RabbitMQ there is an **exchange** which receives messages. This exchange deci
 
 In RabbitMQ a message broker can receive messages from a producer application, queue these messages and then load-balance (if needed) the messages over one or more consumers.
 
-### Direct exchange
-Write more here
-### Topic exchange
-Write more here
-### Fanout exchange
-Write more here
-
 ## REST, websockets, STOMP
 Rather than being a way to communicate data between applications. A message broker is just a seperate service which keeps track of the communication between multiple applications.
 
