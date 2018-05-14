@@ -1,0 +1,33 @@
+version: '3'
+services:
+  influxdb:
+    image: "influxdb:1.5"
+    container_name: keepr_influxdb
+    restart: on-failure
+    hostname: keepr-influx
+    ports:
+      - "8086:8086"
+    volumes:
+      - /srv/docker/influxdb/data:/var/lib/influxdb
+  rabbitmq:
+    image: "rabbitmq:3-management"
+    container_name: keepr_rabbitmq
+    restart: on-failure
+    hostname: keepr-rabbit
+    ports:
+      - "15672:15672"
+      - "4369:4369"
+      - "5672:5672"
+      - "25672:25672"
+  web:
+    build: .
+    container_name: keepr_webserver
+    hostname: keepr-web
+    restart: on-failure
+    ports:
+      - "5000:80"
+    depends_on:
+      - rabbitmq
+      - influxdb
+    command: "node index.js"
+    network_mode: "host"
