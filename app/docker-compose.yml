@@ -29,5 +29,6 @@ services:
     depends_on:
       - rabbitmq
       - influxdb
+    links:
+      - "rabbitmq:rabbit"
     command: "node index.js"
-    network_mode: "host"

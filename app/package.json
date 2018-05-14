@@ -1,0 +1,25 @@
+{
+  "name": "keepr",
+  "version": "1.0.0",
+  "description": "Stockkeeper for a variant of purposes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baskager/project3-new-concepts-with-realtime-data.git"
+  },
+  "author": "Bas Kager",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/baskager/project3-new-concepts-with-realtime-data/issues"
+  },
+  "homepage": "https://github.com/baskager/project3-new-concepts-with-realtime-data#readme",
+  "dependencies": {
+    "amqplib": "^0.5.2",
+    "debug": "^3.1.0",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0"
+  }
+}
