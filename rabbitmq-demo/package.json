@@ -1,0 +1,28 @@
+{
+  "name": "keepr",
+  "version": "1.0.0",
+  "description": "An application that keeps stock for varying use cases like restaurants, webshops or farms",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/baskager/project3-new-concepts-with-realtime-data.git"
+  },
+  "keywords": [
+    "keepr",
+    "stock",
+    "keep",
+    "stockkeeper"
+  ],
+  "author": "Sebastiaan Kager",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/baskager/project3-new-concepts-with-realtime-data/issues"
+  },
+  "homepage": "https://github.com/baskager/project3-new-concepts-with-realtime-data#readme",
+  "dependencies": {
+    "amqplib": "^0.5.2"
+  }
+}
