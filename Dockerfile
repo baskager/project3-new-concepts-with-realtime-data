@@ -1,4 +1,4 @@
 FROM node:carbon
-ADD . /code
-WORKDIR /code
+ADD ./app /app
+WORKDIR /app
 RUN npm install
