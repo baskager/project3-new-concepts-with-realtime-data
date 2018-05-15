@@ -1,3 +1,4 @@
+process.env.NODE_ENV = 'development';
 module.exports = {
-    port: 80
+    port: 5000
 }

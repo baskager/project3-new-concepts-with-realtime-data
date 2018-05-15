@@ -1,0 +1,18 @@
+{{>header title="Keepr"}}
+<main>
+    <section class='categories'>
+
+        {{#each categories}}
+        <a href='/{{slug}}'>
+            <p>{{name}}</p>
+            <img class='thumbnail circle' src='{{thumbnailUrl}}'>
+            <p>500gr</p>
+        </a>
+        {{/each}}
+        <a href='/category/new'>
+            <p>&nbsp;</p>
+            <img class='thumbnail circle' src='https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/add-circle-green-512.png'>
+            <p>Nieuw</p>
+        </a>
+    </section>
+</main>
