@@ -1,0 +1,56 @@
+{{>header title='Keepr'}}
+<nav class='row'>
+    <ul>
+        <li><a href="../">Overzicht</a></li>
+        <li><a href="#edit"><b>+</b> Nieuwe meting</a></li>
+    </ul>
+</nav>
+ <section class='category-meta'>
+    <div class='row flex'>
+        <div class='circle metric'>
+            <h3>Totaal gr.</h3> <p>500gr</p> 
+        </div>
+        <div class='item-title'>
+            <h3><a href="../{{category.slug}}">{{category.name}}</a></h3>
+            <h2>{{item.name}}</h2>
+        </div>
+        <div class='circle metric good' style='background-color: {{item.status.background}}; color: {{item.status.foreground}};'>
+            <h3>status</h3> <p>{{item.status.name}}</p> 
+        </div>
+    </div>
+</section>  
+<main>
+    <section class='statusGraph row'>
+
+    </section>
+    <table class='statusTable row'>
+        <tr>
+            <th>Datum</th>
+            <th>Wijziging</th>
+        </tr>
+        <tr>
+            <td>Test</td>
+            <td>Test</td>
+        </tr>
+        <tr>
+            <td>Test</td>
+            <td>Test</td>
+        </tr>
+        <tr>
+            <td>Test</td>
+            <td>Test</td>
+        </tr>
+        <tr>
+            <td>Test</td>
+            <td>Test</td>
+        </tr>
+        <tr>
+            <td>Test</td>
+            <td>Test</td>
+        </tr>
+        <tr>
+            <td>Test</td>
+            <td>Test</td>
+        </tr>
+    </table>
+</main>

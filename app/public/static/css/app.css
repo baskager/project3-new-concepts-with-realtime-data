@@ -17,6 +17,20 @@ body {
     max-width: 80em;
     margin: 0 auto;
 }
+table, td, th, tr {
+    /* border: 0.2em solid black; */
+}
+th {
+    background: #268487;
+    color: #fff;
+    padding: 0.4em;
+}
+td {
+    padding: 0.6em;
+}
+tr:nth-child(odd) {
+    background: whitesmoke;
+}
 header {
     box-sizing: border-box;
     overflow: auto;
@@ -42,7 +56,7 @@ header h2 {
 }
 nav {
     background: #90AD56;
-    margin-bottom: 1em;
+    /* margin-bottom: 1em; */
 }
 nav ul {
     display: flex;
@@ -69,6 +83,15 @@ nav a {
 }
 nav a:hover, nav a:focus{
     background: #375A28;
+}
+.pagetitle {
+    margin: 0.4em 0;
+    padding: 0;
+    text-align: center;
+    font-size: 3em;
+    opacity: 0.8;
+    color: #24436C;
+    font-weight: 300;
 }
 .thumbnail-list {
     display: flex;
@@ -109,10 +132,12 @@ nav a:hover, nav a:focus{
 .category-meta {
     padding: 1em;
     background: whitesmoke;
+
 }
 .category-meta .metric {
     min-width: 10em;
     min-height: 10em;
+    margin: 0 1em;
     box-sizing: border-box;
     background: #268487;
     padding: 1em;
@@ -120,8 +145,32 @@ nav a:hover, nav a:focus{
     color: #FFFFFF;
     font-weight: bold;
 }
-.category-meta .metric.good {
-    background: #607D37;
+.category-meta .metric:last-child {
+    margin-right: 0em;
+}
+.category-meta .item-title h3 {
+    margin: 0;
+    padding: 0.2em;
+    font-size: 1.4em;
+    text-align: center;
+    font-weight: 400;
+}
+.category-meta .item-title h3 a {
+    opacity: 0.8;
+    color: #24436C;
+    transition: 0.2s;
+    padding: 0.6em;
+}
+.category-meta .item-title h3 a:hover, .category-meta .item-title h3 a:focus {
+    background: #24436C;
+    color: #fff;
+}
+.category-meta .item-title h2 {
+    margin: 0;
+    padding: 0;
+    font-size: 4em;
+    font-weight: 300;
+    color: #24436C;
 }
 .category-meta h3 {
     padding-top: 1em;
@@ -133,4 +182,11 @@ nav a:hover, nav a:focus{
     text-transform: uppercase;
     font-size: 1.4em;
     margin-top: 0.2em;
+}
+.statusGraph {
+    min-height: 14em;
+    background: #444;
+}
+.statusTable {
+    width: 100%;
 }

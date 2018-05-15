@@ -6,6 +6,7 @@ handlebars  = require('express-handlebars'),
 config = require("./config"),
 port = config.port,
 Category = require('./src/Category.class'),
+ITEMSTATUS = require('./src/ITEMSTATUS.enum'),
 Item = require('./src/Item.class'),
 categories = [];
 chillis = [];
@@ -14,8 +15,8 @@ categories.push(new Category('basilicum', 'basilicum', 'https://www.almanac.com/
 categories.push(new Category('chilli\'s', 'chillis', 'https://images-na.ssl-images-amazon.com/images/I/71Bl8JbkPEL._SY355_.jpg'));
 categories.push(new Category('oregano', 'oregano', 'https://fthmb.tqn.com/mCeNyBNp8C7uq_cYnt2he-ZrFNw=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/130136311-56a47d6d5f9b58b7d0d742ca.jpg'));
 
-let sjakie = new Item('sjakie', categories[1].thumbnailUrl);
-let anita = new Item('anita', categories[1].thumbnailUrl);
+let sjakie = new Item('sjakie', ITEMSTATUS.GOOD ,categories[1].thumbnailUrl);
+let anita = new Item('anita', ITEMSTATUS.SICK ,categories[1].thumbnailUrl);
 
 categories[1].addItem(sjakie);
 categories[1].addItem(anita);
@@ -52,7 +53,7 @@ app.get('/:categorySlug/:itemSlug', function(req, res) {
     res.render('item', {
         category: category,
         item: item,
-        subTitle: category.name + ': ' + item.name
+        // subTitle: category.name + ': ' + item.name
     });
 });
 

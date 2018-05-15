@@ -1,20 +1,21 @@
-{{>header title='Keepr' subTitle=category.name}}
-<nav>
+{{>header title='Keepr'}}
+<nav class='row'>
     <ul>
-        <li><a href="./">Terug naar het overzicht</a></li>
-        <li><a href="./"><b>+</b> Nieuwe plant</a></li>
+        <li><a href="../">Overzicht</a></li>
+        <li><a href="./"><b>+</b> Nieuw</a></li>
     </ul>
 </nav>
+<H2 class='pagetitle'>{{category.name}}</H2>
  <section class='category-meta'>
     <div class='row flex'>
         <div class='circle metric'>
             <h3>Totaal gr.</h3> <p>500gr</p> 
         </div>
         <div class='circle metric good'>
-            <h3>Gezondheid</h3> <p>goed</p> 
+            <h3>status</h3> <p>goed</p> 
         </div>
         <div class='circle metric'>
-            <h3>Geoogst 2018</h3> <p>200gr</p> 
+            <h3>Geoogst</h3> <p>200gr</p> 
         </div>
     </div>
 </section>
