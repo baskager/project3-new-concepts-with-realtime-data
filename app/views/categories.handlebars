@@ -1,18 +1,23 @@
-{{>header title="Keepr"}}
+{{>header title="Keepr" subTitle='overzicht'}}
+<nav>
+    <ul>
+        {{!-- <li><a href="./">Home</a></li> --}}
+    </ul>
+</nav>
 <main>
-    <section class='categories'>
+    <section class='thumbnail-list row'>
 
         {{#each categories}}
         <a href='/{{slug}}'>
             <p>{{name}}</p>
             <img class='thumbnail circle' src='{{thumbnailUrl}}'>
-            <p>500gr</p>
+            <p class='subtitle'>500gr</p>
         </a>
         {{/each}}
         <a href='/category/new'>
             <p>&nbsp;</p>
             <img class='thumbnail circle' src='https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/add-circle-green-512.png'>
-            <p>Nieuw</p>
+            <p class='subtitle'>Nieuw</p>
         </a>
     </section>
 </main>

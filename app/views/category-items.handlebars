@@ -1,3 +1,36 @@
-<header>
-    <h1>{{title}}</h1>
-</header>
+{{>header title='Keepr' subTitle=category.name}}
+<nav>
+    <ul>
+        <li><a href="./">Terug naar het overzicht</a></li>
+        <li><a href="./"><b>+</b> Nieuwe plant</a></li>
+    </ul>
+</nav>
+ <section class='category-meta'>
+    <div class='row flex'>
+        <div class='circle metric'>
+            <h3>Totaal gr.</h3> <p>500gr</p> 
+        </div>
+        <div class='circle metric good'>
+            <h3>Gezondheid</h3> <p>goed</p> 
+        </div>
+        <div class='circle metric'>
+            <h3>Geoogst 2018</h3> <p>200gr</p> 
+        </div>
+    </div>
+</section>
+<main class='row'>
+    <section class='thumbnail-list'>
+        {{#each category.items}}
+        <a href='/{{../category.slug}}/{{slug}}'>
+            <p>{{name}}</p>
+            <img class='thumbnail circle' src='{{thumbnailUrl}}'>
+            <p class='subtitle'>500gr</p>
+        </a>
+        {{/each}}
+        <a href='/category/new'>
+            <p>&nbsp;</p>
+            <img class='thumbnail circle' src='https://cdn0.iconfinder.com/data/icons/social-messaging-ui-color-shapes/128/add-circle-green-512.png'>
+            <p class='subtitle'>Nieuw</p>
+        </a>
+    </section>
+</main>
