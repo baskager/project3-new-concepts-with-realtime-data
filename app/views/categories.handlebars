@@ -1,17 +1,30 @@
 {{>header title="Keepr"}}
 <nav class='row'>
     <ul>
-        <li><a href="./"><b>+</b> Nieuwe categorie</a></li>
+        <li><a href="#newCategory"><b>+</b> Nieuwe categorie</a></li>
     </ul>
 </nav>
 <main>
     <H2 class='pagetitle'>Overzicht</H2>
+
+    <div id="newCategory" class="modalDialog">
+        <div class='row'>
+            <a href="#close" title="Sluiten" class="close">X</a>
+            <h2>Categorie aanmaken</h2>
+            <form action=''>
+                <input type='text' placeholder='Naam'/>
+                <input type='text' placeholder='Thumbnail URL'/>
+                <button id='saveCategory' class='save'>Categorie toevoegen</button>
+            </form>
+        </div>
+    </div>
+
     <section class='thumbnail-list row'>
 
         {{#each categories}}
         <a href='/{{slug}}'>
             <p>{{name}}</p>
-            <img class='thumbnail circle' src='{{thumbnailUrl}}'>
+            <img class='thumbnail circle' src='{{thumbnail_url}}'>
             <p class='subtitle'>500gr</p>
         </a>
         {{/each}}
