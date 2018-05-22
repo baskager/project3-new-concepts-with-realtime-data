@@ -1,0 +1,14 @@
+{{>header title='Keepr'}}
+<section class='errorPage'>
+    <div class='row'>
+        <H1>OEPS!</H1>
+        <H3>{{response.statusCode}}</H3>
+        <p class='align-center'>
+            Er ging wat mis waardoor ik niet meer met de lokale diensten kan communiceren. Probeer de pagina opnieuw te laden of raadpleeg de systeembeheerder 
+        </p>
+        <b>De server meldde de volgende fout:</b>
+        <p class='errorDetail'>
+            {{error.message}}
+        </p>
+    </div>
+</section>
